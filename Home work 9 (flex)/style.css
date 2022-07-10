@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 15px auto;
+    padding: 0px 30px;
+    font-family: 'Raleway';
+}
+p{
+    font-size: 1em;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+a:hover{
+    text-decoration: underline;
+}
+h1{
+    font-size: 2em;
+    font-weight: 700;
+}
+h6{
+    font-size: 1em;
+    font-weight: 700;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+* .logo{
+    height: 55px;
+    width: 255px;
+    object-fit: contain;
+    flex-grow: 1;
+}
+nav {
+    flex-grow: 4;
+}
+.lang-selector{
+    flex-grow: 1;
+}
+
+.lang-selector select{
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1em;
+    width: 50%;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0px 0px;
+}
+nav ul li{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.link-tree{
+    display: flex;
+    flex-direction: row;
+    order: 5;
+    width: 100%;
+}
+.link-tree ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 30px 0px;
+    padding: 0px 0px;
+}
+.link-tree ul li{
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.link-tree ul li::after{
+    content: "/";
+    margin: 0px 10px;
+}
+.link-tree ul li:last-child::after{
+    content: "";
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+}
+main{
+    margin: 30px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.chapter{
+    min-width: 255px;
+    box-sizing: border-box;
+}
+.content {
+    box-sizing: border-box;
+}
+.content img{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+}
+.image-slider{
+    position: relative;
+}
+.left_arrow{
+    position:absolute;
+    top: 50%;
+    left: 28px;
+    z-index: 3;
+}
+.right_arrow{
+    position:absolute;
+    top:50%;
+    right: 28px;
+    z-index: 3;
+}
+
+footer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+footer ul{
+    margin: 0px;
+    padding-left: 25px;
+}
+footer ul li{
+    list-style: none inside none;
+    margin: 0px;
+}
+footer ul li:first-child{
+    list-style: "тел. ";    
+    margin: 0px;
+}
+footer div{
+    flex-grow: 1;
+}
+footer div:last-child{
+    flex-grow: 0;
+}

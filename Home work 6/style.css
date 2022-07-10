@@ -1,0 +1,1085 @@
+/*Общее для всех*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+header a{
+    color: white;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out;
+    /* добавим плавность переходов для всех элементов страницы*/
+}
+ul {
+    list-style: none;
+}
+img {
+    display: block;
+    width: 100%;
+}
+/* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
+header::after, .container::after, footer::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+span{
+    flex: 1;
+    border-bottom: 1px none #333;
+    margin: 0px 10px;
+}
+/*Header*/
+header {
+    width: 100%;
+    background: #131210;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 100px;
+} 
+/* стилевой класс, который управляет шириной контейнера сетки*/
+.logo{
+    display: block;
+    float: left;
+}
+.logo img{
+    width: 55px;
+    height: 49px;
+}
+header button{
+    float: right;
+    display: inline-block;
+    position: relative;
+    padding: 15px 45px;
+    background-color: white;
+    color: #135ec5;
+    border: none;
+    border-radius: 1.6667em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#contact {
+    padding: 10px 0px;
+    float: right;
+}
+#contact li {
+    display: inline-block;
+    margin-right: 30px;
+    word-wrap: nowrap;
+}
+#contact img{
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+/*Content*/
+main{
+    width: 100%;
+    background-color: #131210;    
+    color: white;
+    position: relative;
+}
+/*Blocks margins*/
+.banner, .car-series, .announcment, aside{
+    padding: 150px 175px;
+}
+/*Banner*/
+.banner, .car-series-banner{
+    margin: 0px auto;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    display: inline-block;
+}
+.banner-img{
+    position: absolute;
+    margin: 0px auto;
+    width: 793px;
+    height: 490px;
+    top: 70%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.banner-text1{
+    z-index: auto;
+    position: relative;
+    /*font-size: 10em;*/
+    font-size: 10em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: transparent;
+    text-shadow: 0px 2px 3px rgba(35, 33, 28, .5);
+}
+.banner-text2{
+    z-index: auto;
+    position: relative;
+    /*font-size: 10em;*/
+    font-size: 10em;
+    font-weight: bold;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    color: transparent;
+    text-shadow: 0px 2px 3px rgba(35, 33, 28, .5);
+}
+.dots{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    z-index: 3;
+    display: grid;
+}
+.dots img{
+    padding: 3px 0px;
+}
+/*search-panel*/
+.car-search{
+    display: block;
+    text-align: center;
+    padding: 120px 0px;
+}
+.car-search p{
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 20px 0px;
+}
+.search{
+    display: block;
+}
+.search-form{
+    border: 0px;
+    border-bottom: 3px solid rgba(35, 33, 28, .5);
+    padding: 20px 0px;
+    background-color: transparent;
+    outline: none;
+    color: #3c3c3c;
+    font-size: 30px;
+    font-weight: 400;
+
+}
+.search-form::placeholder {
+    color: #3c3c3c;
+    font-size: 30px;
+    text-align: left;
+    padding: 0px 0px;
+}
+.search-form-submit, .car-series-description button, .ads-right-description button{
+    margin: 15px 0px;
+    position: relative;
+    padding: 15px 45px;
+    background-color: #135ec5;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/*car carousel*/
+nav{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+    border-bottom: #c1c1c1 1px solid;
+    background-color: #fdfdfe;
+}
+.car-brands{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+}
+.car-brands li {
+    display: inline-block;
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 0 auto;
+}
+.car-brands img{
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.3;
+    margin: 0 auto;
+}
+.car-brands img:hover{
+    opacity: 1;
+}
+nav p{
+    font-size: 1em;
+    color: #c1c1c1;
+    margin: 30px 0px;
+}
+.car-series{
+    background-color: #fefefe;
+    color: #c1c1c1;
+    display: flex;
+    width: 100%;
+}
+.car-series-description, .car-series-banner{
+    width: 50%;
+}
+.car-series-description{
+    margin-left: 100px;
+}
+* > h3{
+    color: #c1c1c1;;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 2;
+    margin: 40px 0px;
+}
+.car-series h1{
+    color: #135ec5;
+    font-size: 3.3em;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+.car-series1{
+    float: left;
+    z-index: auto;
+    position: relative;
+    font-size: 10em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0px 0px 20px #c1c1c1;
+}
+.car-series2{
+    float: right;
+    z-index: auto;
+    position: relative;
+    font-size: 10em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0px 0px 20px #c1c1c1;
+}
+.car-series-banner-img{
+    position: absolute;
+    margin: 0px auto;
+    width: 80%;
+    height: 80%;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+/* Announcment*/
+.announcment {
+    background-color: #135ec5;
+    margin: 0 auto;
+    text-align: center;
+}
+.announcment h1{
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+}
+.announcment button, .hidden-section button{
+    margin: 80px auto;
+    background-color: #135ec5;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    border: 2px solid white;
+    padding: 15px 45px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.announcment img{
+    height: 236px;
+    width: auto;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%);
+}
+/*ADS*/
+aside{
+    display: flex;
+    background-color: #fefefe;
+}
+aside .ads-left{
+    float: left;    
+    width: 450px;
+    margin: 80px 0px;
+}
+aside .ads-left-top{
+    height: 195px;
+    background-color: #135ec5;
+    position: relative;
+    -webkit-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+.ads-left-top h1{
+    font-size: 8em;
+    text-transform: uppercase;
+    color: white;
+    opacity: .05;
+    text-align:center;
+}
+.ads-left-top label, .ads-right-background label{
+    background-color: #ffffff;
+    border-radius: 30px;
+    color: #135ec5;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 700;
+    float: right;
+    position: absolute;
+    right: 5%;
+    bottom: 70%;
+}
+.ads-right-background label{
+    bottom: 85%;
+}
+.ads-left-top img{
+    width: 250px;
+    height: auto;
+    position: relative;
+    top: -30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%);
+}
+aside .ads-left-bottom{
+    padding: 20px 40px;
+    background-color: white;
+    width: 100%;
+   -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+aside .ads-left-bottom h2{
+    color: black;
+    font-weight: 800;
+    text-align: center;
+    font-size: 1.6em;
+    margin-top: 80px;
+}
+aside .ads-left-bottom h4{
+    color: #135ec5;
+    font-weight: 800;
+    text-align: center;
+    font-size: 0.8em;
+    margin: 15px 0px;
+}
+.ads-left-bottom h3{
+    font-weight: 800;
+    text-align: center;
+}
+price{
+    color: #16ad2c;
+    font-size: 1.6em;
+    font-weight: 800;
+    display: inline-block;
+    letter-spacing: .04em;
+    margin: 10px 0px;
+    padding: 0;
+}
+price::after
+{
+    content: " $";
+}
+.ads-left-bottom button{
+    float: right;
+    background-color: #e2e2e2;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+aside .ads-right{
+    float: right;
+    display: flex;
+    width: 950px;
+    height: 683px;
+    margin-left: 215px;
+    position: relative;
+}
+aside .ads-right-description{
+    overflow: hidden;
+    float: left;
+    width: 50%;
+    padding: 50px 50px;
+    /*border shadow*/
+    -webkit-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6);
+    z-index: 8;
+}
+.price-block{
+    display: flex;
+    align-items:center;
+    margin-bottom: 0px;
+}
+.price-block > p {
+    display: inline-block;
+    color: #c1c1c1;
+}
+.price-block > price {
+    display: inline-block;
+}
+.ads-right-text{
+    margin: 100px 0px;    
+    width: 85%;
+}
+.ads-right-text h2{
+    color: #135ec5;
+    text-align: center;
+    font-weight: 500;
+    margin: 30px;
+}
+.ads-right-description h3{
+    margin: 0px 0px;
+}
+.ads-right-background{
+    float: right;
+    height: 100%;    
+    width: 50%;
+    background-color: #135ec5;
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    position: relative;
+}
+.ads-right-img{
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    z-index: 7;
+}
+.ads-right img{
+    vertical-align: middle;
+    height: 360px;
+    width: auto;
+    position: relative;    
+    top: 50%;
+    left: 75%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.ads-right-img label{
+    bottom: 45%;
+}
+/*Footer*/
+footer{
+    background-color: white;
+    margin: 0px 260px;
+    overflow-x: hidden;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+footer > nav{
+    border: none;
+    background-color: transparent;
+}
+/*Footer car search*/
+.footer-car-search{
+    display: block;
+    text-align: center;
+    padding: 50px 0px;
+}
+.footer-search{
+    display: flex;
+    width: 100%;
+    margin: 30px 0px;
+}
+.footer-search-form, .select-css, .hidden-bar-search{
+    border: 0px;
+    border-bottom: 1px solid rgba(35, 33, 28, .5);
+    padding: 10px 0px;
+    background-color: transparent;
+    outline: none;
+    color: black;
+    font-size: 1em;
+    font-weight: 800;
+    width: 100%;
+}
+.select-css{
+    color:#c1c1c1;
+}
+.city{
+background: url(./img/pin.png) no-repeat center right 0px;
+}
+.footer-search-form::placeholder, .select-css option{
+    color: #c1c1c1;
+    font-size: 1em;
+    text-align: left;
+    padding: 0px 0px;
+}
+.hidden-section{
+    text-align: center;
+}
+.hidden-section button{
+    margin: 0px 0px;
+    border-radius: 30px 30px 0px 0px;
+    border: none;
+    padding-bottom: 0px;
+}
+.hidden-bar{
+    margin: 0px auto;
+    padding: 30px 0px;
+    background-color: #135ec5;
+}
+.hidden-bar-search{
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.hidden-bar-search::placeholder {
+    color: white;
+    opacity: .5;
+}
+.button-block{
+    text-align: center;
+    background-color: #135ec5;
+}
+.button-block-submit{
+    margin: 15px 0px;
+    padding: 15px 45px;
+    background-color: white;
+    color: #135ec5;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+
+
+/*Смартфоны*/
+@media screen and (min-width : 279px) and (max-width : 539px){
+body{
+    overflow-x: hidden;
+}
+header{
+    padding: 30px 15px;    
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner, .car-search, .car-series, .announcment{
+    padding: 30px 15px;
+}
+#contact li {
+    margin: 10px 0px;
+    display: block;
+ }
+#contact {
+    margin: 0 auto;
+    width: 100%;
+    line-height: 1em;
+}
+#contact img{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+header button{
+    display: inline;
+    margin: 10px auto;
+    width: 100%;
+    font-weight: bold;
+}
+.banner-img{
+    position: absolute;
+    margin: 0px auto;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.banner-text1, .banner-text2{
+    font-size: 2.8em;
+}
+.dots{
+    margin-right: -3%;
+}
+.search, .footer-search{
+    display: grid;
+}
+.car-search > * > input[type=text]{
+    width: 100%;
+    font-size: 15px;
+    padding: 15px 0px;
+}
+.car-search > * >input[type=submit], .car-search > * > input[type=text]::placeholder{
+    font-size: 15px;
+}
+.car-brands {
+    display: inline-grid;
+}
+.car-brands img{
+    width: 50%;
+    margin: 30px auto;
+    height: auto;
+}
+/*#car-brands li{    подчеркивание после каждого логотипа на маленьких экранах
+    border-bottom: #c1c1c1 1px solid;
+}*/
+.car-series{
+    display: grid;
+    margin: 0 auto;
+}
+.car-series-description, .car-series-banner{
+    margin: 0 auto;
+    width: 100%;
+}
+.car-series-description button{
+    width: 100%;
+}
+.car-series-description h1{
+    text-align: center;
+}
+.car-series1, .car-series2{
+    font-size: 4em;
+    text-align: center;
+    float: none;
+}
+.announcment button{
+    margin: 30px auto;
+    padding: 7px 30px;
+}
+.announcment h1{
+    font-size: 2em;
+}
+.announcment img{
+    width: 100%;
+    height: auto;
+    top: 99%;
+}
+aside p{
+    font-size: 2em;
+}
+aside{  
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0px;
+    margin: 150px 0px;
+}
+aside .ads-left{
+    width: 100%;
+    float: none;
+    margin: 0px 0px;
+}
+aside .ads-left-bottom {
+    display: grid;
+    padding: 30px 15px;
+}
+aside .ads-left-bottom > price{
+    display: block;
+    text-align: center;
+}
+.ads-left-bottom button {
+    display: block;
+    float: none;
+    margin: 20px 0px;
+    width: 100%;
+}
+.ads-left-top h1{
+    font-size: 6em;
+}
+.ads-left-top img {
+    top: -10%;
+}
+aside .ads-right{
+    display: block;
+    float: none;
+    width: 100%;
+    margin-left: 0px;
+    padding: 0px 0px;
+}
+aside .ads-right-description{
+    float: none;
+    width: 100%;
+    padding: 30px 15px;
+}
+.ads-right-text{
+    margin: 30px 0px;
+    width: 100%;
+}
+.ads-right-description button {
+    width: 100%;
+}
+.price-block{
+    display: block;
+    text-align: center;
+}
+.price-block > p {
+    width: 100%;
+    text-align: center;
+}
+.ads-right-background {
+    float: none;
+    width: 100%;
+    display: none;
+}
+.ads-right-img {
+    background-color: #135ec5;
+    position: relative;
+}
+.ads-right img {
+    position: relative;
+    left: 0px;
+    margin-right: 0px;
+    transform: none;
+    margin: 30px 0px 30px 10px;
+}
+footer{
+    background-color: white;
+    margin: 380px 0px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+.footer-car-search{
+    padding: 0px 5px;
+}
+footer > * >  nav{
+    display: none;
+}
+
+.footer-search{
+    margin: 0px 0px;
+}
+.hidden-section{
+    margin: 30px 0px;
+}
+}
+
+
+@media screen and (min-width : 540px) and (max-width : 767px) {
+header{
+    padding: 15px 15px;    
+    display: grid;
+    margin: 0 auto;
+    text-align: center;
+}
+.logo{
+    display: inline;
+    margin: 10px auto;
+}
+.banner, .car-search, .car-series, .announcment{
+    padding: 70px 15px;
+}
+#contact li {
+    margin: 10px 0px;
+    display: block;
+}
+#contact {
+    margin: auto;
+    line-height: 1em;
+}
+#contact img{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+header button{
+    display: inline;
+    margin: 10px auto;
+    width: 100%;
+    font-weight: bold;
+}
+.banner-img{
+    position: absolute;
+    margin: 0px auto;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.banner-text1, .banner-text2{
+    font-size: 2.8em;
+}
+.dots{
+    margin-right: 0;
+}
+#search{
+    display: grid;
+}
+.car-search > * > input[type=text]{
+    width: 100%;
+    font-size: 15px;
+}
+.car-search >*>input[type=submit], .car-search > * > input[type=text]::placeholder{
+    font-size: 15px;
+}
+#car-brands img{
+    width: 70%;
+}
+#car-brands ul{
+    width: 100%;
+}
+.car-series{
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+}
+.car-series-description, .car-series-banner{
+    margin: 0 auto;
+    width: 100%;
+}
+.car-series-description button{
+    width: 100%;
+}
+.car-series-description h1{
+    margin-top: 65px;
+    text-align: center;
+}
+.car-series1, .car-series2{
+    font-size: 5em;
+    text-align: center;
+    float: none;
+}
+.announcment button{
+    margin: 30px auto;
+    width: 100%;
+}
+.announcment h1{
+    font-size: 2em;
+}
+.announcment img{
+    width: 100%;
+    height: auto;
+    top: 94%;
+}
+aside{
+    display: grid;
+    width: 100%;
+    padding: 150px 0px;
+}
+aside .ads-left{
+    margin: 80px auto;
+    float: none;
+}
+aside .ads-right {
+    float: none;
+    margin: 0px auto;
+    width: 100%;
+}
+.ads-right-text {
+    margin: 40px 0px;
+}
+.ads-right-description h3{
+    font-size: 0.85em;
+
+}
+aside .ads-right-description {
+    padding: 25px 25px;
+}
+.ads-right img {
+    left: 95%;
+}
+footer{
+    margin: 0px 0px;
+}
+.footer-search{
+    display: grid;
+    margin: 0px 15px;
+}
+}
+
+
+
+/*Большие экраны*/
+@media only screen and (min-width : 1824px) {
+body{
+    background-color: white;
+    max-width: 1980px;
+    margin: 0 auto;
+}
+}
+
+
+
+/*iPads (Портрет и Ландшафтный)*/
+@media (min-width : 768px) and (max-width : 1279px) {
+header{
+    margin: 0 auto;
+    padding: 15px 50px;
+}
+.banner, .car-search, .car-series{
+    padding: 70px 30px;
+}
+
+.banner-text1, .banner-text2, .car-series1, .car-series2{
+    font-size: 7em;
+}
+.banner-img{
+    width: 70%;
+    height: 70%;
+}
+.dots{
+    margin-right: -2%;
+}
+#search{
+    display: flex;
+}
+.car-search > * > input[type=text]{
+    width: 100%;
+    font-size: 15px;
+    padding: 15px 0px;
+
+}
+.car-search > * > input[type=text]::placeholder{
+    font-size: 15px;
+    text-align: left;
+}
+.car-search > * >input[type=submit]{
+    font-size: 15px;
+    padding: 10px 45px;
+    text-align: left;
+}
+.car-series{
+    display: flex;
+}
+
+.car-series1, .car-series2{
+    font-size: 5em;
+}
+aside{
+    display: grid;
+    width: 100%;
+    padding: 150px 0px;
+}
+aside .ads-left{
+    margin: 80px auto;
+    float: none;
+}
+aside .ads-right {
+    float: none;
+    margin: 0px auto;
+    width: 100%;
+}
+.ads-right-description h2 {
+    margin: 60px 0px 30px 0px;
+}
+aside .ads-right-description {
+    padding: 25px 25px;
+}
+.ads-right img {
+    left: 80%;
+}
+
+footer {
+    margin: 0px 0px;
+}
+.footer-search{
+    display: grid;
+    margin: 0px 0px;
+}
+.footer-car-search {
+    padding: 30px 15px;
+}
+.hidden-bar{
+    padding: 0px 15px;
+}
+
+}
+
+@media screen and (min-width : 1280px) and (max-width : 1800px) {
+    header{
+        margin: 0 auto;
+        padding: 15px 30px;
+    }
+    .banner, .car-search, .announcment, .car-series{
+        padding: 60px 30px;
+    }
+
+    .banner-text1, .banner-text2{
+        font-size: 9em;
+    }
+    .banner-img{
+        position: absolute;
+        margin: 0px auto;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    .dots{
+        margin-right: 9%;
+    }
+    #search{
+        display: flex;
+    }
+    .car-search > * > input[type=text]{
+        font-size: 20px;
+    }
+    .car-search >*>input[type=submit], .car-search > * > input[type=text]::placeholder{
+        font-size: 20px;
+    }
+    .car-series1, .car-series2{
+        font-size: 7em;
+    }
+    aside{
+        display: grid;
+        width: 100%;
+    }
+    aside .ads-left{
+        margin: 80px auto;
+        float: none;
+    }
+    aside .ads-right {
+        float: none;
+        margin: 0px auto;
+    }
+footer{
+    margin: 0px 0px;
+}
+}

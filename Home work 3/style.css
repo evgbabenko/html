@@ -1,0 +1,165 @@
+/* Font linking*/
+@font-face {
+    font-family: "Myriad Pro";
+    src: url("./fonts/MYRIADPRO-REGULAR.OTF");
+   }
+/* Default styles for all document */
+body{
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Styles for divisions */
+.mainbody{
+    background-color: white;
+    width: 752px;
+    margin: auto;
+}
+.header{
+    background-color: rgba(45, 112, 83, 1);
+    display: flex;
+    padding: 46px;
+}
+.toptitle{
+    font-size: 30px;
+    color: white;
+    height: 131px;
+    width: 134px;
+    text-transform: capitalize;
+    margin-left: 57px;
+}
+.menu{
+    position: relative;
+    margin-right: 44px;
+    float: right;
+    margin-left: 249px;
+    cursor: pointer;
+}
+.toppic{
+    display: flex;
+    background-image: url(./img/bg1.png);
+    height: 470px;
+}
+.main-header{
+    display: flex;
+}
+.namesurname{
+    font-size: 36px;
+    margin-left: 68px;
+    margin-top: 140px;
+}
+.spec{
+    margin-left: 66px;
+    margin-top: 29px;
+    /*width: 245px;
+    height: 50px;*/
+}
+.about{
+    margin-left: 44px;
+    margin-top: 46px;
+    width: 590px;
+    height: 166px;
+}
+.reason{
+    font-size: 36px;
+    margin-left: 44px;
+    margin-top: 46px;
+}
+.reasonslist{
+    margin-left: 44px;
+    margin-top: 43px;
+}
+.bbutton{
+    margin-top: 42px;
+    margin-left: 208px;
+}
+.footer{
+    margin-top: 50px;
+    background-color: #888888;
+    display: flex;
+    padding: 29px;
+}
+.address{
+    font-size: 18px;
+    margin-left: 297px;
+    margin-top: 75px;
+    color: white;
+    position: absolute;
+}
+.phone{
+    font-size: 18px;
+    color: white;
+    margin-top: 29px;
+    margin-left: 428px;
+    text-decoration: none;
+}
+.email{
+    font-size: 18px;
+    color: white;
+    margin-top: 71px;
+    margin-left: 534px;
+    position: absolute;
+    text-decoration: none;
+}
+
+
+
+/* Styles for lists */
+ul.list{
+    list-style: "- ";
+}
+
+/* Styles for images */
+.topphoto{
+    height: 144px;
+    width: 144px;
+}
+.menuimg{
+    width: 84px;
+    height: 12px;
+    margin-top: 13px;
+}
+.mainphoto{
+    border-radius: 200px;
+    width: 247px;
+    height: 247px;
+    margin-top: 72px;
+    margin-left: 35px;
+}
+.bottomphoto{
+    margin-left: 15px;
+    height: 99px;
+    width: 99px;
+}
+
+/* Styles for buttons */
+.button1{
+    height: 77px;
+    width: 344px;
+    background: #cb9223;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-left: 195px;
+    margin-top: 368px;
+    position: absolute;
+    cursor: pointer;
+}
+.button2{
+    height: 77px;
+    width: 344px;
+    background: #cb9223;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+

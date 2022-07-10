@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+  margin: 0px;
+  padding: 0px;
+}
+main{
+    background-color: #f2f2f2;
+    font-family: 'Bitter', serif;
+    margin: 0 auto;
+    width: 755px;
+    padding:0px 21px;
+    border-radius: 10px;
+}
+.submenu{
+    color: #541504;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 25px;
+}
+.submenu::after{
+  content: "";
+  display: block;
+  height: 10px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg width=\'5\' height=\'10\'  viewBox=\'0 0 20 10\' xmlns=\'http://www.w3.org/2000/svg\' fill-rule=\'evenodd\' clip-rule=\'evenodd\' stroke-miterlimit=\'10\'%3e%3cpath fill=\'none\' d=\'M0 0h20v10H0z\'/%3e%3cclipPath id=\'a\'%3e%3cpath d=\'M0 0h20v10H0z\'/%3e%3c/clipPath%3e%3cg clip-path=\'url(%23a)\'%3e%3cpath d=\'M20 7.384c-4.999-.001-5-4.768-9.999-4.768C5 2.616 5 7.384 0 7.384\' fill=\'none\' stroke=\'%23000\'/%3e%3c/g%3e%3c/svg%3e');
+    margin: 15px 0px;  
+}
+.content{
+  color: #546670;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  overflow-wrap: break-word;
+  margin-top: 10px;
+}
+ul{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+ul > li{
+  display: flex;
+  list-style: none;
+  margin: 0px 0px 25px 0px;
+  padding: 0px;
+  width: 100%;
+}
+ul > li:last-child{
+  margin: 0px;
+}
+.img{
+  flex-grow: 1;
+  min-width: 140px;
+  height: 95px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.img img {
+  top:50%;
+  left:50%;
+  width:140px;
+  height:95px;
+  object-fit:cover;
+  border-radius: 10px;
+}
+.img:hover{
+  opacity: .5;
+  cursor:pointer;
+  transition: opacity .5s ease-out;
+}
+.description{
+  margin: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  align-items: stretch;  
+  width: 100%;
+}
+
+/* ---------------------------------*/
+section {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0px;
+}
+section > * {
+  padding: 0;
+  margin: 0;
+}
+span{
+  flex: 1;
+  border-bottom: 1px dotted #333;
+  margin: 0px 10px;
+}
+item{
+  font-size: 22px;
+  font-weight: 600;
+  display: inline-block;
+  letter-spacing: .04em;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+price{
+  color: #969604;
+  font-size: 22px;
+  font-weight: 600;
+  display: inline-block;
+  letter-spacing: .04em;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+price::before
+{
+  content: "$ ";
+  font-style: italic;
+}
+a > *{
+  -moz-text-decoration-line: none;
+  text-decoration: none !important;  
+  color: #b6903d;
+}
+a:hover > * {
+  color: #969604;
+}

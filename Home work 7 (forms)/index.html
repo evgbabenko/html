@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="form-text">Форма входа</div>
+        <form id="login-form" >
+            <div class="email"><input type="text" id="email" name="email" placeholder="Email" pattern="[^ @]*@[^ @]*" required></div>
+            <div class="pwd"><input type="password" id="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Должен содержать как минимум одно число, одну большую букву, одну маленькую букву и длина не менее 8 символов." required></div>
+            <div class="button-block"><input type="submit" id="button1" value="Авторизоваться"></div>
+        </form>
+        <div class="reg">
+            У вас нет учетной записи? <a href="#">Зарегистрироваться</a>.
+        </div>
+    </main>
+    
+</body>
+</html>
